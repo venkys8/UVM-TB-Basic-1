@@ -25,7 +25,7 @@ class monitor extends uvm_monitor;
       t.a=vif.a;
       t.b=vif.b;
       t.y=vif.y;
-      `uvm_info("DRIVER",$psprintf("Data sent to scoreboard. a=%0d, b=%0d, y=%0d",t.a,t.b,t.y),UVM_LOW)
+      `uvm_info("MONITOR",$psprintf("Data sent to scoreboard. a=%0d, b=%0d, y=%0d",t.a,t.b,t.y),UVM_LOW)
       send.write(t);
     end
   endtask    
