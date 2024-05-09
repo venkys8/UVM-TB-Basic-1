@@ -12,6 +12,7 @@ class generator extends uvm_sequence#(transaction);
     t=transaction::type_id::create("t");
     repeat(10) begin
       start_item(t);
+      t.randomize();
       `uvm_info("GEN",$psprintf("data sent to driver, a=%0d,b=%0d",t.a,t.b),UVM_LOW)
       finish_item(t);
     end
