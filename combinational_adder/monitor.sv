@@ -5,7 +5,7 @@ class monitor extends uvm_monitor;
   
   function new(string name="MON",uvm_component parent=null);
     super.new(name,parent);
-    send=new("sned",this);
+    send=new("send",this);
   endfunction
   
   transaction t;
